@@ -3,7 +3,7 @@ import numpy as np
 
 
 def ackley(x, y):
-    return -20 * np.exp(-0.02 * np.sqrt(0.5 * (x ** 2 + y ** 2))) - np.exp(
+    return -20 * np.exp(-0.2 * np.sqrt(0.5 * (x ** 2 + y ** 2))) - np.exp(
         0.5 * (np.cos(2 * np.pi * x) + np.cos(2 * np.pi * y))) + 20 + np.e
 
 
@@ -29,16 +29,8 @@ if __name__ == '__main__':
 
     # show the plot
     plt.show()
-    # r_min, r_max = -32.768, 32.768
-    # xaxis = arange(r_min, r_max, 2.0)
-    # yaxis = arange(r_min, r_max, 2.0)
-    # x, y = meshgrid(xaxis, yaxis)
-    # results = ackley(x, y)
-    # figure = plt.figure()
-    # axis = figure.gca(projection='3d')
-    # axis.plot_surface(x, y, results, cmap='jet', shade= "false")
-    # plt.show()
-    # plt.contour(x,y,results)
-    # plt.show()
-    # plt.scatter(x, y, results)
-    # plt.show()
+
+    #contour plot
+    plt.contour(X, Y, Z, levels=50, cmap='jet')
+    plt.colorbar()
+    plt.show()

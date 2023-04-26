@@ -24,6 +24,9 @@ def plotFuction():
     ax.set_ylabel('X2')
     ax.set_zlabel('Himmelblau function')
     plt.show()
+    plt.contour(X, Y, Z, levels=50, cmap='jet')
+    plt.colorbar()
+    plt.show()
 
 
 if __name__ == '__main__':
